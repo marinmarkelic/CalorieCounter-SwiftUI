@@ -7,6 +7,9 @@ struct TabBarView: View {
             HomeView()
                 .tabItem({ Text("Home")} )
 
+            SearchView()
+                .tabItem({ Text("Search")} )
+
             FavoritesView()
                 .tabItem({ Text("Favorites")} )
         }

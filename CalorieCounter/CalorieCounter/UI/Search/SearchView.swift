@@ -2,11 +2,20 @@ import SwiftUI
 
 struct SearchView: View {
 
-    @State var text: String = ""
+    let interactor: SearchInteractorProtocol = SearchInteractor()
+
+    @State var itemInfo: NutritionItems = .empty
 
     var body: some View {
         VStack {
-            SearchBar(text: $text)
+            SearchBar()
+                .onTap {
+                    interactor.search(for: $0, at: $itemInfo)
+                }
+
+            ForEach(itemInfo.items, id: \.name) { item in
+                SearchResult(item: item)
+            }
         }
         .padding()
         .background(Color.init("BackgroundColor").ignoresSafeArea())
@@ -14,9 +23,25 @@ struct SearchView: View {
 
 }
 
+struct SearchResult: View {
+
+    let item: NutritionItem
+
+    var body: some View {
+        Text(item.name)
+    }
+
+}
+
 struct SearchBar: View {
 
-    @Binding var text: String
+    let onTap: (String) -> Void
+
+    @State var text: String = ""
+
+    init(_ onTap: @escaping (String) -> Void = { _ in }) {
+        self.onTap = onTap
+    }
 
     var body: some View {
         HStack {
@@ -25,10 +50,17 @@ struct SearchBar: View {
             Spacer()
 
             Image(systemName: "magnifyingglass")
+                .onTapGesture {
+                    onTap(text)
+                }
         }
         .padding()
         .background(.gray)
         .cornerRadius(10)
+    }
+
+    func onTap(_ onTap: @escaping (String) -> Void) -> SearchBar {
+        SearchBar(onTap)
     }
 
 }

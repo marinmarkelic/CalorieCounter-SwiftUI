@@ -17,6 +17,12 @@
 		9C708B8A28CA0E680092A1E6 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C708B8928CA0E680092A1E6 /* FavoritesView.swift */; };
 		9C708B8C28CA103F0092A1E6 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C708B8B28CA103F0092A1E6 /* TabBarView.swift */; };
 		9C708B9028CA14A80092A1E6 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C708B8F28CA14A80092A1E6 /* SearchView.swift */; };
+		9C708B9228CA15FC0092A1E6 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C708B9128CA15FC0092A1E6 /* SearchInteractor.swift */; };
+		9C708B9528CA178F0092A1E6 /* NutritionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C708B9428CA178F0092A1E6 /* NutritionRepository.swift */; };
+		9C708B9828CA17D70092A1E6 /* NutritionNetworkDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C708B9728CA17D70092A1E6 /* NutritionNetworkDataSource.swift */; };
+		9C708B9C28CA18260092A1E6 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C708B9B28CA18260092A1E6 /* NetworkClient.swift */; };
+		9C708B9E28CA195B0092A1E6 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C708B9D28CA195B0092A1E6 /* RequestError.swift */; };
+		9C708BA028CA1B4D0092A1E6 /* NutritionNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C708B9F28CA1B4D0092A1E6 /* NutritionNetworkClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +37,12 @@
 		9C708B8928CA0E680092A1E6 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		9C708B8B28CA103F0092A1E6 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		9C708B8F28CA14A80092A1E6 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		9C708B9128CA15FC0092A1E6 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		9C708B9428CA178F0092A1E6 /* NutritionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionRepository.swift; sourceTree = "<group>"; };
+		9C708B9728CA17D70092A1E6 /* NutritionNetworkDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionNetworkDataSource.swift; sourceTree = "<group>"; };
+		9C708B9B28CA18260092A1E6 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		9C708B9D28CA195B0092A1E6 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		9C708B9F28CA1B4D0092A1E6 /* NutritionNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionNetworkClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +75,9 @@
 		9C708B7028C9ED000092A1E6 /* CalorieCounter */ = {
 			isa = PBXGroup;
 			children = (
+				9C708B9928CA18070092A1E6 /* Network */,
+				9C708B9628CA17C60092A1E6 /* DataSources */,
+				9C708B9328CA17710092A1E6 /* Repositories */,
 				9C708B7F28C9ED540092A1E6 /* UI */,
 				9C708B7128C9ED000092A1E6 /* CalorieCounterApp.swift */,
 				9C708B7528C9ED020092A1E6 /* Assets.xcassets */,
@@ -112,9 +127,44 @@
 		9C708B8D28CA14900092A1E6 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				9C708B9128CA15FC0092A1E6 /* SearchInteractor.swift */,
 				9C708B8F28CA14A80092A1E6 /* SearchView.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		9C708B9328CA17710092A1E6 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				9C708B9428CA178F0092A1E6 /* NutritionRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		9C708B9628CA17C60092A1E6 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				9C708B9728CA17D70092A1E6 /* NutritionNetworkDataSource.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		9C708B9928CA18070092A1E6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9C708B9A28CA18180092A1E6 /* Clients */,
+				9C708B9D28CA195B0092A1E6 /* RequestError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9C708B9A28CA18180092A1E6 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				9C708B9B28CA18260092A1E6 /* NetworkClient.swift */,
+				9C708B9F28CA1B4D0092A1E6 /* NutritionNetworkClient.swift */,
+			);
+			path = Clients;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,12 +239,18 @@
 			files = (
 				9C708B8128C9ED740092A1E6 /* HomeView.swift in Sources */,
 				9C708B7428C9ED000092A1E6 /* ContentView.swift in Sources */,
+				9C708B9528CA178F0092A1E6 /* NutritionRepository.swift in Sources */,
+				9C708B9828CA17D70092A1E6 /* NutritionNetworkDataSource.swift in Sources */,
 				9C708B8C28CA103F0092A1E6 /* TabBarView.swift in Sources */,
+				9C708B9228CA15FC0092A1E6 /* SearchInteractor.swift in Sources */,
+				9C708BA028CA1B4D0092A1E6 /* NutritionNetworkClient.swift in Sources */,
 				9C708B8A28CA0E680092A1E6 /* FavoritesView.swift in Sources */,
 				9C708B9028CA14A80092A1E6 /* SearchView.swift in Sources */,
 				9C708B8628CA0A9C0092A1E6 /* ConsumedItemsView.swift in Sources */,
+				9C708B9E28CA195B0092A1E6 /* RequestError.swift in Sources */,
 				9C708B8428CA091D0092A1E6 /* TodayView.swift in Sources */,
 				9C708B7228C9ED000092A1E6 /* CalorieCounterApp.swift in Sources */,
+				9C708B9C28CA18260092A1E6 /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
