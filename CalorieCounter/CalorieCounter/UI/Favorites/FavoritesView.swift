@@ -19,13 +19,13 @@ struct FavoritesView: View {
                     Spacer()
                 }
 
-                ForEach(0...5, id: \.self) { _ in
+                ForEach(0...15, id: \.self) { _ in
                     FavoriteView()
                 }
             }
             .padding()
         }
-        .background(Color.init("BackgroundColor"))
+        .background(Color.init("BackgroundColor").ignoresSafeArea(.all, edges: .top))
     }
 
 }

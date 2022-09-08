@@ -15,6 +15,7 @@
 		9C708B8428CA091D0092A1E6 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C708B8328CA091D0092A1E6 /* TodayView.swift */; };
 		9C708B8628CA0A9C0092A1E6 /* ConsumedItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C708B8528CA0A9C0092A1E6 /* ConsumedItemsView.swift */; };
 		9C708B8A28CA0E680092A1E6 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C708B8928CA0E680092A1E6 /* FavoritesView.swift */; };
+		9C708B8C28CA103F0092A1E6 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C708B8B28CA103F0092A1E6 /* TabBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		9C708B8328CA091D0092A1E6 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		9C708B8528CA0A9C0092A1E6 /* ConsumedItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumedItemsView.swift; sourceTree = "<group>"; };
 		9C708B8928CA0E680092A1E6 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		9C708B8B28CA103F0092A1E6 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				9C708B7F28C9ED540092A1E6 /* UI */,
-				9C708B8828CA0E4D0092A1E6 /* Favorites */,
 				9C708B7128C9ED000092A1E6 /* CalorieCounterApp.swift */,
 				9C708B7528C9ED020092A1E6 /* Assets.xcassets */,
 				9C708B7728C9ED020092A1E6 /* Preview Content */,
@@ -80,7 +81,9 @@
 			isa = PBXGroup;
 			children = (
 				9C708B7328C9ED000092A1E6 /* ContentView.swift */,
+				9C708B8B28CA103F0092A1E6 /* TabBarView.swift */,
 				9C708B8228C9ED820092A1E6 /* Home */,
+				9C708B8828CA0E4D0092A1E6 /* Favorites */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			files = (
 				9C708B8128C9ED740092A1E6 /* HomeView.swift in Sources */,
 				9C708B7428C9ED000092A1E6 /* ContentView.swift in Sources */,
+				9C708B8C28CA103F0092A1E6 /* TabBarView.swift in Sources */,
 				9C708B8A28CA0E680092A1E6 /* FavoritesView.swift in Sources */,
 				9C708B8628CA0A9C0092A1E6 /* ConsumedItemsView.swift in Sources */,
 				9C708B8428CA091D0092A1E6 /* TodayView.swift in Sources */,

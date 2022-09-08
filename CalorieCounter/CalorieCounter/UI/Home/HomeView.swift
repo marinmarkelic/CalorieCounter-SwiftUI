@@ -14,7 +14,7 @@ struct HomeView: View {
                 ConsumedItemsView()
             }
         }
-        .background(Color.init("BackgroundColor").ignoresSafeArea())
+        .background(Color.init("BackgroundColor").ignoresSafeArea(.all, edges: .top))
     }
 
 }
