@@ -12,7 +12,7 @@ struct TodayView: View {
 
 
             ConsumedView()
-                .background(.black.opacity(0.8))
+                .background(Color.init("ElementColor"))
                 .cornerRadius(10)
 
             NutrientsView()
@@ -52,7 +52,7 @@ struct NutrientsView: View {
                 ForEach(0...5, id: \.self) { _ in
                     NutrientsCell()
                         .padding()
-                        .background(.black.opacity(0.8))
+                        .background(Color.init("ElementColor"))
                         .cornerRadius(10)
                 }
             }

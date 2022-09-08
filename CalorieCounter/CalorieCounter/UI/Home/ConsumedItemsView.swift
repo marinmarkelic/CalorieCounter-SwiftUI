@@ -13,7 +13,7 @@ struct ConsumedItemsView: View {
             ForEach(1...5, id: \.self) { _ in
                 ConsumedItem()
                     .padding()
-                    .background(.black.opacity(0.8))
+                    .background(Color.init("ElementColor"))
                     .cornerRadius(10)
             }
         }

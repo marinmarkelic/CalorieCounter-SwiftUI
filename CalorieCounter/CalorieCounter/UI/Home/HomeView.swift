@@ -14,6 +14,7 @@ struct HomeView: View {
                 ConsumedItemsView()
             }
         }
+        .background(Color.init("BackgroundColor").ignoresSafeArea())
     }
 
 }
@@ -22,7 +23,7 @@ struct GraphView: View {
 
     var body: some View {
         Rectangle()
-            .foregroundColor(.black.opacity(0.8))
+            .foregroundColor(Color.init("ElementColor"))
             .cornerRadius(10)
     }
 
